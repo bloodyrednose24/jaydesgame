@@ -1,0 +1,60 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main(){
+srand(time(0));
+    int choice1;
+    int choice2; 
+    int choice3;
+    int healthY = 100;
+    int healthJ = 100;
+    int randomWood = rand() % 6;
+    int randomFork = rand() % 11;
+    int randomBat = rand() % 26;
+    int randomKnife = rand() % 49;
+    int randomJ = rand() % 36;
+    
+    cout << "You wake up in a random parking lot and see a tall figure in the distance...ITS EVIL JAYDES!!! And he has a KNIFE!" << endl << endl << "What do you do?:" << endl << "(1)Run and hide behind a car." << endl << "(2)Run and hide behind a garbage truck." << endl << "(3)Run towards him full speed." << endl; 
+    cin >> choice1;
+
+if(choice1 == 1){
+    cout << endl << "Evil Jaydes starts moving towards you so you decide to run behind a car and notice a piece of wood and a fork."<< endl << endl <<" Which one do you choose to use as a weapon?:" << endl << "(1)Wood" << endl << "(2)Fork" << endl;
+        cin >> choice2;
+        if (choice2 == 1){
+            cout << "You chose the piece of wood and run to attack evil Jaydes!";
+                  while (healthY != 0){
+            cout << healthJ;
+            cout << randomWood;
+            cout << healthJ - randomWood;
+            
+            
+    }else if (choice2 == 2){
+        cout << "You chose the fork and run to attack evil Jaydes!";
+    }else{
+        cout << "ERROR! GAME OVER!";
+    }
+    }
+        
+}else if(choice1 == 2){
+   
+    cout << "Jaydes starts moving towards you so you decide to run behind a garbage truck and notice a baseball bat and a knife." << endl<< endl<<" Which one do you choose to use as a weapon?:" << endl << "(1)Baseball bat" << endl << "(2)Knife" << endl;
+    cin >> choice3;
+        if (choice3 == 1){
+            cout << "You chose the baseball bat and run to attack evil Jaydes!";
+        }else if (choice3 == 2){
+            cout << "You chose the knife and run to attack evil Jaydes!";
+        }else {
+            cout << "ERROR! GAME OVER!";
+        }
+        
+}else{
+    cout << endl << "You ran towards evil Jaydes hoping to take a picture with your favorite music artist. He ends up stabbing you, takes a picture for the next album cover and runs away. Youre left to bleed out..." << endl << "GAME OVER!";
+}
+    
+    
+    
+    
+    
+}
