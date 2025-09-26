@@ -1,0 +1,149 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main() {
+    srand(time(0));
+
+    int choice1, choice2, choice3;
+    int healthY = 100;
+    int healthJ = 100;
+    int randomWood = rand() % 6 + 1;     
+    int randomFork = rand() % 11 + 1;   
+    int randomBat = rand() % 26 + 1;     
+    int randomKnife = rand() % 49 + 1;   
+    int randomJ = rand() % 36 + 1;       
+
+    cout << "You wake up in a random parking lot and see a tall figure in the distance... IT'S EVIL JAYDES!!! And he has a KNIFE!" << endl << endl;
+    cout << "What do you do?\n";
+    cout << "(1) Run and hide behind a car.\n";
+    cout << "(2) Run and hide behind a garbage truck.\n";
+    cout << "(3) Run towards him full speed.\n";
+
+    cin >> choice1;
+
+    if (choice1 == 1) {
+        cout << "\nEvil Jaydes starts moving towards you so you decide to run behind a car and notice a piece of wood and a fork.\n";
+        cout << "\nWhich one do you choose to use as a weapon?\n(1) Wood\n(2) Fork\n";
+        cin >> choice2;
+
+        if (choice2 == 1) {
+            cout << "\nYou chose the piece of wood and run to attack Evil Jaydes!" << endl;
+
+           
+            while (healthY > 0 && healthJ > 0) {
+                int playerHit = rand() % 6 + 1;  
+                int jaydesHit = rand() % 36 + 1; 
+
+                healthJ -= playerHit;
+                healthY -= jaydesHit;
+
+                cout << "\nYou hit Jaydes with wood and deal " << playerHit << " damage.";
+                cout << "\nJaydes' Health: " << max(0, healthJ);
+
+                cout << "\nJaydes hits you back and deals " << jaydesHit << " damage.";
+                cout << "\nYour Health: " << max(0, healthY) << endl;
+
+                if (healthJ <= 0) {
+                    cout << "\nYou defeated Evil Jaydes with a piece of wood! You win and real Jaydes takes a picture with you!\n";
+                    break;
+                }
+                if (healthY <= 0) {
+                    cout << "\nHe ends up stabbing you to death, takes a picture for the next album cover and runs away... GAME OVER.\n";
+                    break;
+                }
+            }
+
+        } else if (choice2 == 2) {
+            cout << "\nYou chose the fork and run to attack Evil Jaydes!" << endl;
+                while (healthY > 0 && healthJ > 0) {
+                int playerHit = rand() % 11 + 1;  
+                int jaydesHit = rand() % 36 + 1; 
+
+                healthJ -= playerHit;
+                healthY -= jaydesHit;
+
+                cout << "\nYou hit Jaydes with a fork and deal " << playerHit << " damage.";
+                cout << "\nJaydes' Health: " << max(0, healthJ);
+
+                cout << "\nJaydes hits you back and deals " << jaydesHit << " damage.";
+                cout << "\nYour Health: " << max(0, healthY) << endl;
+
+                if (healthJ <= 0) {
+                    cout << "\nYou defeated Evil Jaydes with a piece of wood! You win and real Jaydes takes a picture with you!\n";
+                    break;
+                }
+                if (healthY <= 0) {
+                    cout << "\nHe ends up stabbing you to death, takes a picture for the next album cover and runs away... GAME OVER.\n";
+                    break;
+                }
+        }} else {
+            cout << "\nERROR! GAME OVER!" << endl;
+        }
+
+    } else if (choice1 == 2) {
+        cout << "\nJaydes starts moving towards you so you run behind a garbage truck and notice a baseball bat and a knife.\n";
+        cout << "\nWhich one do you choose to use as a weapon?\n(1) Baseball bat\n(2) Knife\n";
+        cin >> choice3;
+
+        if (choice3 == 1) {
+            cout << "\nYou chose the baseball bat and run to attack Evil Jaydes!" << endl;
+             while (healthY > 0 && healthJ > 0) {
+                int playerHit = rand() % 26 + 1;  
+                int jaydesHit = rand() % 36 + 1; 
+
+                healthJ -= playerHit;
+                healthY -= jaydesHit;
+
+                cout << "\nYou hit Jaydes with the baseball bat and deal " << playerHit << " damage.";
+                cout << "\nJaydes' Health: " << max(0, healthJ);
+
+                cout << "\nJaydes hits you back and deals " << jaydesHit << " damage.";
+                cout << "\nYour Health: " << max(0, healthY) << endl;
+
+                if (healthJ <= 0) {
+                    cout << "\nYou defeated Evil Jaydes with a piece of wood! You win and real Jaydes takes a picture with you!\n";
+                    break;
+                }
+                if (healthY <= 0) {
+                    cout << "\nHe ends up stabbing you to death, takes a picture for the next album cover and runs away... GAME OVER.\n";
+                    break;
+                }
+        }} else if (choice3 == 2) {
+            cout << "\nYou chose the knife and run to attack Evil Jaydes!" << endl;
+             while (healthY > 0 && healthJ > 0) {
+                int playerHit = rand() % 49 + 1;  
+                int jaydesHit = rand() % 36 + 1; 
+
+                healthJ -= playerHit;
+                healthY -= jaydesHit;
+
+                cout << "\nYou hit Jaydes with the knife and deal " << playerHit << " damage.";
+                cout << "\nJaydes' Health: " << max(0, healthJ);
+
+                cout << "\nJaydes hits you back and deals " << jaydesHit << " damage.";
+                cout << "\nYour Health: " << max(0, healthY) << endl;
+
+                if (healthJ <= 0) {
+                    cout << "\nYou defeated Evil Jaydes with a piece of wood! You win and real Jaydes takes a picture with you!\n";
+                    break;
+                }
+                if (healthY <= 0) {
+                    cout << "\nHe ends up stabbing you to death, takes a picture for the next album cover and runs away... GAME OVER.\n";
+                    break;
+                }
+        }} else {
+            cout << "\nERROR! GAME OVER!" << endl;
+        }
+
+    } else if (choice1 == 3) {
+        cout << "\nYou ran toward Evil Jaydes hoping to take a picture with your favorite music artist.\n";
+        cout << "He ends up stabbing you, takes a picture for the next album cover and runs away.\n";
+        cout << "You're left to bleed out... GAME OVER!\n";
+    } else {
+        cout << "\nInvalid choice. GAME OVER!" << endl;
+    }
+
+    return 0;
+}
